@@ -1,0 +1,102 @@
+.two,
+.three,
+.four,
+.six {
+    width: 90%;
+    margin: auto;
+}
+
+.twotop {
+    text-align: center;
+}
+
+.twogrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.grid > img {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+.grid > p {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.three {
+    display: flex;
+    padding: 10px;
+}
+
+.three > div {
+    width: 450px;
+    height: 530px;
+    margin: auto;
+}
+
+.three > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.four {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.four > div > button {
+    background-color: transparent;
+    border: 1px solid rgb(175, 174,174);
+    padding: 10px;
+    width: 100px;
+}
+
+.box {
+    display: flex;
+    padding: 10px;
+}
+
+.fourbox {
+    margin: auto;
+    padding: 10px;
+    width: 200px;
+}
+
+.fourbox > img {
+    width: 200px;
+}
+
+.fourbox > p {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.slider {
+    width: 100%;
+    box-sizing: border-box;
+    height: 90vh;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.slider > img {
+    height: 100%;
+    width: 100%;
+    
+}

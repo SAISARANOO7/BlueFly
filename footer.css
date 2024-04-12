@@ -1,0 +1,103 @@
+.upper{
+    display: flex;
+    text-align: center;
+}
+
+.footups{
+    margin: auto;
+    padding: 10px;
+}
+
+.footupimg>img{
+    margin: auto;
+    height: 300px;
+    width: 400px;
+}
+
+.footupcont{
+    margin: auto;
+    padding: 20px;
+}
+
+.footupcont>button{
+    width: 400px;
+    padding: 10px;
+    border: 0.3px solid rgb(153,152,152);
+    background-color: transparent;
+    height: 40px;
+    line-height: 1.6;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+
+.lower{
+    width: 100%;
+    background-color: #e6e6e6;
+}
+
+.lowerup{
+    display: flex;
+}
+
+.lowerup>div {
+    padding: 40px;
+}
+
+.lowerup>div>div>div {
+      padding: 20px;
+}
+
+.abus{
+    display: flex;
+}
+
+
+ 
+.signup > input {
+    margin: auto;
+    padding: 7px;
+    width: 270px;
+  }
+  
+  .signup > button {
+    margin: auto;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    width: 290px;
+  }
+  .signup > button:hover {
+    background-color: rgba(0, 0, 0, 0.479);
+    cursor: pointer;
+  }
+  .signup > ion-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  .signup > ion-icon:hover {
+    color: rgba(0, 0, 0, 0.479);
+    cursor: pointer;
+  }
+
+
+
+  
+
+
+
+.lowerlow{
+    padding: 20px;
+}
+
+.lowerlow>img{
+    display: block;
+    margin: auto;
+    height: 100px;
+}
+
+.lowerlow>p{
+    text-align: center;
+    padding: 20px;
+}
+

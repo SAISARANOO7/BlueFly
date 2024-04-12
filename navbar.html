@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Fashion up to 70% off Shoes, Handbags, Dresses & More</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://media-exp1.licdn.com/dms/image/C4D0BAQEKK8LuZGgkIA/company-logo_200_200/0/1574689983692?e=2159024400&v=beta&t=hKUJ4rZb4Wp_C9-2XTcelqSR-RwIPtgWxliB0sJjr2g"/>
+
+</head>
+<style>
+    * {
+        font-family: Futura, sans-serif;
+        background-color: white;
+    }
+
+    #LandingPg {
+        width: 100%;
+    }
+
+    #BlurFly_Nav {
+        width: 100%;
+        height: 200px;
+    }
+
+    #Header02,
+    #Header01 {
+        width: 90%;
+        display: flex;
+        margin: auto;
+    }
+
+    #space{
+        margin: auto;
+        width: 35%;
+        height: 50px;
+    }
+
+    #Logo {
+        margin: auto;
+        width: 30%;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #Logo > img {
+        margin-left: 16%;
+    }
+
+    #SearchBar {
+        margin: auto;
+        width: 30%;
+        height: 50px;
+        display: flex;
+    }
+
+    #SearchTxt {
+         width: 250px;
+         height: 60%;
+         border: 1px solid rgba(179, 179, 179, 0.623);
+         border-radius: 5px;
+         margin-left: 18%;
+         margin-top: 8px;
+    }
+
+    #iconSearch{
+        margin-left: 55px;
+        margin-top: 11px;
+    }
+
+    #iconSearch > ion-icon {
+        width: 20px;
+        height: 20px;
+        color: gray;
+
+    }
+
+    #iconSearch > ion-icon:hover {
+        cursor: pointer;
+        transition: width 0.1s linear;
+        color: rgba(151, 151, 151, 0.897);
+    }
+
+    #SignIn,
+    #Cart {
+        width: 3%;
+        height: 50px;
+        margin-top: 15px;
+    }
+
+    #SignIn > ion-icon {
+        width: 20px;
+        height: 20px;
+        color: gray;
+    }
+
+    #SignIn > ion-icon:hover {
+        cursor: pointer;
+        transition: width 0.1s linear;
+        color: rgba(151, 151, 151, 0.897);
+    }
+
+    #Cart > ion-icon {
+        width: 20px;
+        height: 20px;
+        color: gray;
+    }
+
+    #Cart > ion-icon:hover {
+        cursor: pointer;
+        transition: width 0.1s linear;
+        color: rgba(151, 151, 151, 0.897);
+        }
+
+        #Header02 {
+            height: 40px;
+        }
+
+        #Head_tags {
+            color: black;
+            margin-left: 30px;
+            font-size: 12px;
+            margin-top: 10px;
+            line-height: 1.6;
+            letter-spacing: 0.2em;
+        }
+
+        #Head_tags:hover {
+             border-bottom: 2px solid rgba(44, 44, 44, 0.767);
+             cursor: pointer;
+             transition: width 0.3s linear;
+        }
+</style>
+<body>
+    <div id="#LandingPg">
+        <div id="#BlurFly_Nav">
+            <div id="Header01">
+                <div id="space"></div>
+                <div id="Logo" onclick="window.location.href='index.html'">
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt="logoSite" style="width:260px; align-items: center;">
+                </div>
+
+                <div id="SearchBar">
+                    <div>
+                        <input id="searchTxt" type="text" placeholder="Search">
+                    </div>
+                    <div id="iconSearch">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div id="SignIn" onclick="window.location.href='Signup.html'">
+                <ion-icon id="iconNav" name="person-outline"></ion-icon>
+                </div>
+
+                
+                <div id="Cart" onclick="widow.location.href='Cart.html'">
+                    <ion-icon id="iconNav" name="bag-outline"></ion-icon>
+                    </div>
+
+                
+            </div>
+
+            <div id="Header02">
+                <div id="Head_tags" style="margin-left: 2%" onclick="window.location.href='shoes.html'">SHOES</div>
+                <div id="Head_tags" onclick="window.location.href='women.html'">WOMEN</div>
+                <div id="Head_tags" onclick="window.location.href='Handbag&Acc.html'">HANDBAGS & ACCESSORIES</div>
+
+                <div id="Head_tags">DESIGNERS</div>
+                <div id="Head_tags">MEN</div>
+                <div id="Head_tags">SUNGLASSES</div>
+                <div id="Head_tags">JEWELRY & WATCHES</div>
+                <div id="Head_tags">UNDER $50</div>
+                <div id="Head_tags">BEAUTY</div>
+                <div id="Head_tags" style="color: red;">CLEARANCE</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script>
+    window.onscroll = function() {myFunction()};
+    var header = document.getElementById("BlurFly_Nav");
+
+    var stayNav = header.offsetTop;
+    function myFunction() {
+        if(window.pageOffset > stayNav) {
+            header.classList.add("stayNav");
+        }
+        else {
+            header.classList.remove("stayNav");
+        }
+    }
+</script>
+
+
+    
+</body>
+</html>
