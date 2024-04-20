@@ -1,0 +1,48 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid rgb(185, 183, 183);
+    text-align: center;
+}
+
+.conthead {
+    display: flex;
+    margin: auto;
+    padding: 10px;
+}
+
+.headleft {
+    padding-left: 10px;
+}
+
+.headright {
+    padding-right: 20px;
+}
+
+.products {
+    display: flex;
+}
+
+.headleft {
+    width: 80%;
+    text-align: left;
+}
+
+.left {
+    width: 25%;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+#product {
+    max-width: 200px;
+    max-height: 300px;
+    cursor: pointer;
+    box-shadow: rgba(60, 61, 61, 0.397) 0px 2px 5px -1px, rgba(81, 82, 82, 0.397) 0px 1px 3px -1px;
+}

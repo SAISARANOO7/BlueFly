@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        src="https://kit.fontawesome.com/21bc9a918c.js"
+        crossorigin="anonymous"
+    </script>
+    <style>
+        .mainCart {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            z-index: 26;
+        }
+
+        #cart {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background-color: white;
+            width: 360px;
+            height: 100vh;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            padding: 10px;
+        }
+
+        #cartUp {
+            grid-area: 1 / 1 / 2 / 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 30px;
+            border-bottom: solid 1px #00000036;
+        }
+
+        #cartUp > h2 {
+            font-weight: 500;
+        }
+
+        cartUp > * {
+            margin: 25px;
+        }
+
+        #tot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #cartD > button {
+            width: 100%;
+            border: none;
+            color: white;
+            background: black;
+            height:45px;
+            font-size: 30px;
+        }
+
+        #cartD > p {
+            font-family: monospace;
+        }
+
+        #cartD {
+            grid-area: 6 / 1 / 7 / 2;
+            border-top: solid 1px #00000036;
+        }
+
+        #cartBlock {
+            overflow-y: scroll;
+            grid-area: 2 / 1 / 6 / 2;
+        }
+
+        .cartCard {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: solid 1px #00000036;
+        }
+
+        #cartT {
+            font-size: 16px;
+            margin-bottom: 0px;
+            font-family: monospace;
+        }
+
+        .cartDel > * {
+            margin: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="mainCart">
+        <div id="cart">
+            <div id="cartUp">
+                <h2 style="font-family: 'Tiemann', serif;">CART</h2>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div id="cartBlock">
+                <div class="cartCard">
+                    <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/f9dad4c9-d8f8-4ca9-a32d-2c45df5fe251_360x.jpg?v=1625182499" alt=""/>
+                    <div class="cartDel">
+                        <h2 class="cartT">Burberry Black Monogram Motif T-Shirt</h2>
+                        <p class="cartcolor">Black</p>
+                        <p id="priceCart">$116.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cartD">
+                <div id="tot">
+                    <h3>SUBTOTAL</h3>
+                    <h3 id="TotalCart">$215.00</h3>
+                </div>
+                <p>Shipping, taxes and discounts codes calculated at checkout.</p>
+                <button>checkout</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    let testData = [
+        {
+            img: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/f9dad4c9-d8f8-4ca9-a32d-2c45df5fe251_360x.jpg?v=1625182499",
+            title:
+            "Burberry Black Monogram Motif T-Shirt",
+            price: 110,
+            color: "Black",
+        },
+
+        {
+            img: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/f9dad4c9-d8f8-4ca9-a32d-2c45df5fe251_360x.jpg?v=1625182499",
+            title:
+            "Burberry Black Monogram Motif T-Shirt",
+            price: 110,
+            color: "Black",
+        },
+
+        {
+            img: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/f9dad4c9-d8f8-4ca9-a32d-2c45df5fe251_360x.jpg?v=1625182499",
+            title:
+            "Burberry Black Monogram Motif T-Shirt",
+            price: 110,
+            color: "Black",
+        },
+
+        {
+            img: "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/f9dad4c9-d8f8-4ca9-a32d-2c45df5fe251_360x.jpg?v=1625182499",
+            title:
+            "Burberry Black Monogram Motif T-Shirt",
+            price: 110,
+            color: "Black",
+        },
+    ];
+
+    let cart = testData;
+    function showCart() {
+        let cartBlock = document.querySelector("#cartBlock");
+        let priceTotal = 0;
+        cartBlock.innerHTML = null;
+        cart.map(({ img, title, color, price}) => {
+            let div = document.createElement("div");
+            div.setAttribute("class", "cartCard");
+            let Img = document.createElement("img");
+            Img.setAttribute("src", img);
+            let cartDel = document.createElement("div");
+            cartDel.setAttribute("class", "cartDel");
+            let h2 = document.createElement("h2");
+            h2.innerHTML = title;
+            h2.setAttribute("class","cartT");
+            let cartColor = document.createElement("p");
+            cartColor.setAttribute("class","cartColor");
+            cartColor.innerHTML = color;
+            let priceCart = document.createElement("p");
+            priceCart.setAttribute("class","priceCart");
+            priceCart.innerHTML = "$" + price;
+            priceTotal += price;
+            cartDel.append(h2, cartColor, priceCart);
+            div.append(Img, cartDel);
+            cartBlock.append(div);
+            });
+            document.querySelector("#TotalCart").innerHTML = "$" + priceTotal;
+    }
+    showCart();
+
+</script>
+</html>
